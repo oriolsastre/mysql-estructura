@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS `optica`.`adreca` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `carrer` VARCHAR(25) NOT NULL,
     `numero` SMALLINT UNSIGNED NOT NULL,
-    `pis` TINYINT UNSIGNED,
-    `porta` TINYINT UNSIGNED, /*pot ser porta A, B? Alguna cosa així?*/
+    `pis` TINYINT,
+    `porta` TINYINT, /*pot ser porta A, B? Alguna cosa així?*/
     `ciutat` VARCHAR(50) NOT NULL,
     `codipostal` VARCHAR(10), /*codis postals estrangers?*/
     `pais` VARCHAR(25)
