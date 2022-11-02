@@ -1,5 +1,7 @@
 # Pizzeria
 
+![Esquema](model_relacional.png)
+
 ## Queries
 
 ### Llista quants productes de tipus “Begudes”. s'han venut en una determinada localitat.
@@ -40,11 +42,13 @@ Si volem generalitzar i veure les comandes efectuades per cada empleat (repartid
 
 ## Comentaris a la Base de Dades
 
-Algunes consideracions a la base de dades.
+Algunes consideracions a la base de dades. Comentaris que m'he fet sobretot per mi per anar justificant el procés.
+
+Tant pels municipis com per les províncies, podríem tenir taules per a cadascuna, amb els valors possibles (potser no es pot repartir a totes les províncies sinó només a algunes en concret; _idem_ per municipis) i fer la clau forana corresponent, tant pels clients com per les botigues.
 
 ### Empleat
 
-Posició podria ser un boolean, repartidor o cuiner, però he triat ENUM per si hi poguéssin haver més posicions a considerar en un futur.
+Posició podria ser un boolean, repartidor o cuiner, però he triat ENUM per si hi poguéssin haver més posicions a considerar en un futur, encarregat, cambrer, etc.
 
 ### Producte
 
@@ -52,4 +56,11 @@ Per a la imatge del producte he triat el tipus BLOB, tot i que una altra manera 
 
 ### Comanda_Prodcute
 
-Producte on delete restrict. Comentar-ho.
+La clau forana al producte l'he posat amb `DELETE RESTRICT`. En un establiment suposo que és interessant saber les comandes passades que s'han fet, i per molt que es deixi de vendre un producte, si eliminessim també aquest valor, es perdria informació de vendes anteriors. Si es posés amb Null, perdríem el preu de la comanda.
+
+Aquest argument també explica perquè totes les claus foranes a la taula COMANDA estan posades amb `DELETE SET NULL`, per no perdre informació de vendes anteriors.
+
+### Restriccions necessàries
+
+- Tots els productes tipus!=pizza -> categoria=NULL
+- Poder comprovar que comanda.preu == suma de producte.preu*comanda_producte.quantitat
