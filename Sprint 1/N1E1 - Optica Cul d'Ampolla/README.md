@@ -1,5 +1,7 @@
 # Òptica Cul d'Ampolla
 
+![Esquema](model_relacional.png)
+
 ## Queries
 
 ### Llista el total de compres d’un client/a.
@@ -37,7 +39,7 @@ A `client.id` triem l'ID que ens interessi ia `YEAR(venda.data)` l'any que ens i
 
 ## Comentaris a la Base de Dades
 
-Algunes consideracions a la base de dades.
+Algunes consideracions a la base de dades. Comentaris que m'he fet sobretot per mi per anar justificant el procés.
 
 ### Adreces
 

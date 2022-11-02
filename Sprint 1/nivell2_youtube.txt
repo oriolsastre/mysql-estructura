@@ -1,0 +1,70 @@
+USUARI
+    id,
+    nom_usuari,
+    email,
+    password,
+    data_naixement
+    sexe,
+    pais,
+    codi_postal
+
+VIDEO
+    id,
+    titol,
+    descripcio,
+    grandaria (MB),
+    nom_arxiu,
+    durada_video,
+    thumbnail,
+    reproduccions,
+    estat   (public/privat/ocult),
+    usuari FK,
+    publicacio DATAHORA
+    ?likes/dislikes
+
+ETIQUETA
+    etiquetaID,
+    etiqueta
+
+video_etiqueta
+    video PK
+    etiqueta PK
+
+CANAL
+    id,
+    nom,
+    descripcio,
+    data_creacio
+    usuari FK
+
+subscripcio
+    usuari PK,
+    canal PK,
+    data_subscripcio
+
+LIKE_video
+    usuari,
+    video,
+    like -1/1
+    timestamp
+
+PLAYLIST
+    id,
+    nom,
+    usuari FK,
+    data_creacio,
+    estat boole (public/privat)
+
+COMENTARI
+    id,
+    usuari,
+    video,
+    comentari,
+    data,
+    resposta FK_propi
+
+LIKE_comentari
+    usuari,
+    comentari,
+    like -1/1
+    timestamp
