@@ -1,4 +1,4 @@
-USUARI
+--USUARI
     id,
     nom_usuari,
     email,
@@ -8,7 +8,7 @@ USUARI
     pais,
     codi_postal
 
-VIDEO
+--VIDEO
     id,
     titol,
     descripcio,
@@ -22,40 +22,40 @@ VIDEO
     publicacio DATAHORA
     ?likes/dislikes
 
-ETIQUETA
+--ETIQUETA
     etiquetaID,
     etiqueta
 
-video_etiqueta
+--video_etiqueta
     video PK
     etiqueta PK
 
-CANAL
+--CANAL
     id,
     nom,
     descripcio,
     data_creacio
     usuari FK
 
-subscripcio
+--subscripcio
     usuari PK,
     canal PK,
     data_subscripcio
 
-LIKE_video
+--LIKE_video
     usuari,
     video,
     like -1/1
     timestamp
 
-PLAYLIST
+--PLAYLIST
     id,
     nom,
     usuari FK,
     data_creacio,
     estat boole (public/privat)
 
-COMENTARI
+--COMENTARI
     id,
     usuari,
     video,
