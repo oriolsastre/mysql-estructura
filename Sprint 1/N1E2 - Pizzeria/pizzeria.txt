@@ -1,4 +1,4 @@
-CLIENT
+--CLIENT
     id           INT
     nom         Varchar
     cognoms     Varchar
@@ -8,14 +8,14 @@ CLIENT
     provincia
     telefon
 
-BOTIGA
+--BOTIGA
     botigaID
     Adreca
     codi_postal
     localitat
     provincia
 
-EMPLEAT
+--EMPLEAT
     empleatID
     nom
     cognoms
@@ -23,7 +23,7 @@ EMPLEAT
     telefon
     posicio     BOOLEAN o ENUM repartidor/cuiner
 
-PRODUCTE
+--PRODUCTE
     id
     nom
     tipus       ENUM[pizza, hamburguesa, beguda]
@@ -31,15 +31,15 @@ PRODUCTE
     imatge      BLOB
     preu
 
-CATEGORIA
+--CATEGORIA
     id
     nom
 
-PIZZA_CATEGORIA     O afegir camp categoria a producte i generalment és null excepte si és pizza 
+--PIZZA_CATEGORIA     O afegir camp categoria a producte i generalment és null excepte si és pizza 
     pizzaID     PK
     categoria
 
-COMANDA
+--COMANDA
     id      Int
     client  FK int 
     datahora    timestamp
@@ -47,12 +47,10 @@ COMANDA
     preu
     botiga FK
 
-COMANDA_PRODUCTE?
+--COMANDA_PRODUCTE?
     comanadID
     producteID
     quantitat
 
-COMANDA_REPARTIMENT
-    comanda
-    repartidor
-    data
+
+    
