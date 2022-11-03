@@ -87,7 +87,7 @@ CREATE TABLE `youtube`.`llista` (
 CREATE TABLE `youtube`.`llista_video` (
     llista INT,
     video INT,
-    posicio SMALLINT UNSIGNED UNIQUE AUTO_INCREMENT COMMENT 'Per ordenar els vídeos amb un ordre concret si es vol.',
+    posicio SMALLINT UNSIGNED,
     PRIMARY KEY (`llista`, `video`),
     CONSTRAINT `FK_Llista_LlistaVideo` FOREIGN KEY (`llista`) REFERENCES `llista` (`llistaID`)
         ON UPDATE CASCADE ON DELETE CASCADE,
