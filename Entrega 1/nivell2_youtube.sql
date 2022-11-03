@@ -1,5 +1,6 @@
 DROP DATABASE IF EXISTS `youtube`;
 CREATE DATABASE `youtube`;
+USE `youtube`;
 
 CREATE TABLE `youtube`.`pais` (
     paisID INT PRIMARY KEY AUTO_INCREMENT,

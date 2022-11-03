@@ -1,5 +1,6 @@
 DROP DATABASE IF EXISTS `spotify`;
 CREATE DATABASE `spotify`;
+USE `spotify`;
 
 CREATE TABLE `spotify`.`pais` (
     paisID INT PRIMARY KEY AUTO_INCREMENT,
