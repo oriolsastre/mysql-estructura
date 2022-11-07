@@ -1,6 +1,17 @@
 ## Comentaris d'algunes consultes
 
-4. He usat el valor d'€ a \$ de 1€=0,97$ el dia 20221103 12:29.
+4\. He usat el valor d'€ a \$ de 1€=0,97$ el dia 20221103 12:29.
+
+24 i 25. També es podria fer:
+
+    SELECT producto.nombre AS 'Nom del producte', precio AS 'Preu', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo ORDER BY precio ASC LIMIT 1;
+
+    SELECT producto.nombre AS 'Nom del producte', precio AS 'Preu', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo ORDER BY precio DESC LIMIT 1;
+Com en les queries 18 i 19.
+
+26\. Hi ha l'opció de mirar extra quina és la ID de Lenovo i aleshores no cal fer el `JOIN` i només afegir la clàusula `WHERE codigo_fabricante=${ID de Lenovo}`.
+
+27\. _Idem_ amb la consulta 26 si ja saps la ID i aleshores no cal fer el `JOIN`.
 
 ### Universitat
 

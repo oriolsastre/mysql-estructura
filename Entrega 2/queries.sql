@@ -20,7 +20,15 @@ SELECT nombre AS 'Nom', precio AS 'Preu' FROM producto ORDER BY precio DESC LIMI
 SELECT nombre AS 'Nom del producte' FROM producto WHERE codigo_fabricante=2;
 SELECT producto.nombre AS 'Nom del producte', precio AS 'Preu', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo;
 SELECT producto.nombre AS 'Nom del producte', precio AS 'Preu', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo ORDER BY fabricante.nombre ASC;
-
+SELECT producto.codigo AS 'Codi del producte', producto.nombre AS 'Nom del producte', fabricante.codigo AS 'Codi del fabricant', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo;
+SELECT producto.nombre AS 'Nom del producte', MIN(precio) AS 'Preu', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo;
+SELECT producto.nombre AS 'Nom del producte', MAX(precio) AS 'Preu', fabricante.nombre AS 'Nom del fabricant' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo;
+SELECT producto.nombre AS 'Producte' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo WHERE fabricante.nombre='Lenovo';
+SELECT producto.nombre AS 'Producte' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo WHERE fabricante.nombre='Crucial' AND precio>200;
+SELECT producto.nombre AS 'Producte' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo WHERE (fabricante.nombre='Asus' OR fabricante.nombre='Hewlett-Packard' OR fabricante.nombre='Seagate');
+SELECT nombre AS 'Producte' FROM producto WHERE codigo_fabricante IN (SELECT codigo FROM fabricante WHERE nombre='Asus' OR nombre='Hewlett-Packard' OR nombre='Seagate');
+SELECT producto.nombre AS 'Producte', precio AS 'Preu' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo WHERE fabricante.nombre LIKE '%e';
+SELECT producto.nombre AS 'Producte', precio AS 'Preu' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo WHERE fabricante.nombre LIKE '%w%';
 
 /*----Universitat----*/
 /*01*/ SELECT apellido1 AS 'Primer cognom', apellido2 AS 'Segon cognom', nombre AS 'Nom' FROM persona WHERE tipo='alumno' ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC;
