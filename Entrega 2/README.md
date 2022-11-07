@@ -4,7 +4,7 @@
 
 ### Universitat
 
-1.7. Si en sabem el NIF és que ja sabem qui és, però he afegit la clàusula `persona.tipo='alumno'` per si per coses hi hagués un professor amb el mateix nif, ja sigui per error, o perquè el professor està matriculat en un altre departament.
+1.7. Si en sabem el NIF és que ja sabem qui és, però he afegit la clàusula `persona.tipo='alumno'` per si per coses hi hagués un professor amb el mateix nif, ja sigui per error, o perquè el professor està matriculat com a alumne en un altre departament.
 
 1.8. Suposo que ho havíem de fer així i he mirat quin id tenia el grau que ens has dit. Sinó es podria haver afegit un JOIN amb la taula grado i afegir clàsules amb paraules claus com `grado.nombre LIKE ('%Informática%') AND grado.nombre LIKE ('%Plan 2015%')` si no sabem el nom exacte del grau.
 

@@ -37,4 +37,4 @@ Aleshores per buscar els albums favorits d'un usuari faríem la consulta:
 
 I podem canviar `alb_` per `can_` o `art_`.
 
-Els possibles problemes que veig potser serien que no hi ha les relacions fetes entre les taules favorits -> artista/album/canco i per tant no sabem si tenim valors contradictoris o erronis a la taula favorits (p.e. alb_125 i no hi ha cap album amb albumID=125); tampoc es creen els índexs i, per tant, en una base de dades possiblement molt gran com la de Spotify aquest procés potser seria computacionalment molt costós per trobar els favorits (ara hi penso, i potser creant l'índex jo sí que és ràpid el mètode).
+Els possibles problemes que veig potser serien que no hi ha les relacions fetes entre les taules favorits -> artista/album/canco i per tant no sabem si tenim valors contradictoris o erronis a la taula favorits (p.e. alb_125 i no hi ha cap album amb albumID=125); tampoc es creen els índexs i, per tant, en una base de dades possiblement molt gran com la de Spotify aquest procés potser seria computacionalment molt costós per trobar els favorits (ara hi penso, i potser creant l'índex jo, no seria tan lent el mètode).
