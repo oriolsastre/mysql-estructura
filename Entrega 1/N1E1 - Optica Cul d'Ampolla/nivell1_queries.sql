@@ -1,3 +1,4 @@
+USE `optica`
 SELECT marca.nom AS Marca, venda.data AS 'Data de venda'
 FROM venda JOIN ulleres ON venda.ulleres = ulleres.id
     JOIN marca ON ulleres.marca = marca.id
