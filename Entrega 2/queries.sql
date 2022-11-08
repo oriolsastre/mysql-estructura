@@ -1,4 +1,4 @@
-SELECT nombre AS nom FROM producto ORDER BY Nom ASC;
+USE `tienda`; SELECT nombre AS nom FROM producto ORDER BY Nom ASC;
 SELECT nombre AS Nom, precio AS Preu FROM producto ORDER BY Nom ASC;
 DESCRIBE producto;
 SELECT nombre AS Nom, precio AS 'Preu en €', ROUND(precio*0.97,2) AS 'Preu en $' FROM producto;
@@ -31,6 +31,7 @@ SELECT producto.nombre AS 'Producte', precio AS 'Preu' FROM producto JOIN fabric
 SELECT producto.nombre AS 'Producte', precio AS 'Preu' FROM producto JOIN fabricante ON codigo_fabricante=fabricante.codigo WHERE fabricante.nombre LIKE '%w%';
 
 /*----Universitat----*/
+USE `universidad`;
 /*01*/ SELECT apellido1 AS 'Primer cognom', apellido2 AS 'Segon cognom', nombre AS 'Nom' FROM persona WHERE tipo='alumno' ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC;
 /*02*/ SELECT nombre AS 'Nom', apellido1 AS '1er cognom', apellido2 AS '2n cognom' FROM persona WHERE tipo='alumno' AND telefono IS NULL;
 /*03*/ SELECT nombre AS 'Nom', apellido1 AS '1er cognom', apellido2 AS '2n cognom' FROM persona WHERE tipo='alumno' AND YEAR(fecha_nacimiento)=1999;

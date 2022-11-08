@@ -1,3 +1,4 @@
+USE `pizzeria`;
 SELECT SUM(comanda_producte.quantitat) AS 'Begudes Venudes'
 FROM comanda_producte JOIN producte ON comanda_producte.producte=producteID
     JOIN comanda ON comanda_producte.comanda=comandaID
